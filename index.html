@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>powderday — Book your next stay by text</title>
+  <meta name="description" content="powderday is the conversational booking layer for hospitality. Your guests discover and book your properties by chat — on WhatsApp, iMessage, or your site — and you own the guest relationship, not the OTA." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="powderday — Book your next stay by text" />
+  <meta property="og:description" content="The AI booking agent for hospitality. Discover and book hotels in a single text message." />
+  <meta property="og:url" content="https://powderday.ai" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="brand" aria-label="powderday home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
+            <rect width="32" height="32" rx="9" fill="url(#g)"/>
+            <path d="M7 22.5 13 12l3.2 5.4L19 13l6 9.5H7Z" fill="#fff"/>
+            <circle cx="22.5" cy="9.5" r="2.2" fill="#fff" opacity=".9"/>
+            <defs>
+              <linearGradient id="g" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FF9F45"/><stop offset=".55" stop-color="#FF5C39"/><stop offset="1" stop-color="#FF3D6E"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="brand-name">powderday</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#how">How it works</a>
+        <a href="#operators">For hotels</a>
+        <a href="#travelers">For travelers</a>
+      </nav>
+
+      <a href="#waitlist" class="btn btn-primary btn-sm nav-cta">Get early access</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">AI booking infrastructure for hospitality</span>
+          <h1>Book your next stay <span class="grad-text">by text.</span></h1>
+          <p class="lede">
+            powderday is the conversational booking layer for hotels. Guests discover and
+            book your properties in a single chat — on WhatsApp, iMessage, or your own site —
+            and you keep the guest relationship, not the OTA.
+          </p>
+          <div class="hero-cta">
+            <a href="#waitlist" class="btn btn-primary">Get early access</a>
+            <a href="#operators" class="btn btn-ghost">For hotel operators →</a>
+          </div>
+          <p class="hero-note">No app to download. Just a message.</p>
+        </div>
+
+        <!-- Phone / chat mockup -->
+        <div class="hero-phone reveal" aria-label="Example booking conversation">
+          <div class="phone">
+            <div class="phone-notch" aria-hidden="true"></div>
+            <div class="chat-header">
+              <span class="chat-avatar" aria-hidden="true">p</span>
+              <div class="chat-id">
+                <strong>powderday</strong>
+                <span class="chat-status"><i></i> online</span>
+              </div>
+            </div>
+            <div class="chat-body" id="chat">
+              <div class="msg out" data-step="1"><p>I'd like to book a hotel in Milan, Italy in September 🇮🇹</p></div>
+              <div class="msg in" data-step="2"><p>Love it — Milan in September is gorgeous. Quick one: exact dates, and what's the vibe? Design-forward, central, budget-friendly?</p></div>
+              <div class="msg out" data-step="3"><p>Sep 12–15. Design-forward, walkable to the Duomo.</p></div>
+              <div class="msg in" data-step="4"><p>Perfect. Here's the one I'd book myself:</p></div>
+              <div class="msg in card" data-step="5">
+                <div class="prop">
+                  <div class="prop-img" aria-hidden="true"></div>
+                  <div class="prop-info">
+                    <strong>Senato Milano</strong>
+                    <span>★ 4.8 · 4 min walk to the Duomo</span>
+                    <span class="prop-price">€240 / night · €720 total</span>
+                  </div>
+                </div>
+              </div>
+              <div class="msg in" data-step="6"><p>Want me to lock in Sep 12–15?</p></div>
+              <div class="msg out" data-step="7"><p>Yes, book it 🙌</p></div>
+              <div class="msg in" data-step="8"><p>Done ✅ Confirmation <b>#PWD-8842</b> is in your inbox. Have an amazing trip!</p></div>
+            </div>
+          </div>
+          <div class="phone-glow" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <!-- integration strip -->
+      <div class="container">
+        <div class="logo-strip reveal">
+          <span class="logo-strip-label">Plugs into your stack</span>
+          <ul>
+            <li>Mews</li><li>Cloudbeds</li><li>Opera PMS</li><li>SiteMinder</li><li>Stripe</li><li>WhatsApp Business</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROBLEM ===== -->
+    <section class="section problem">
+      <div class="container narrow reveal">
+        <h2 class="section-title">Travel booking is stuck in 2008.</h2>
+        <p class="section-sub">
+          Forty open tabs. A dozen filters. Endless scrolling, then a checkout flow designed
+          to confuse you. Meanwhile the way we actually talk to each other became a text box.
+        </p>
+        <div class="before-after">
+          <div class="ba-card before">
+            <span class="ba-tag">Today</span>
+            <p>Search → filter → compare → second-guess → repeat. 47 tabs, 3 hours, still not sure.</p>
+          </div>
+          <div class="ba-arrow" aria-hidden="true">→</div>
+          <div class="ba-card after">
+            <span class="ba-tag">With powderday</span>
+            <p>“Book me a design hotel near the Duomo, Sep 12–15.” Done in one message.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="section" id="how">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">How it works</span>
+          <h2 class="section-title">Three steps. One conversation.</h2>
+        </div>
+        <div class="steps">
+          <div class="step reveal">
+            <span class="step-num">1</span>
+            <div class="step-icon" aria-hidden="true">💬</div>
+            <h3>The guest sends a message</h3>
+            <p>On WhatsApp, iMessage, SMS, or a chat widget on your own site — wherever they already are.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step-num">2</span>
+            <div class="step-icon" aria-hidden="true">🧠</div>
+            <h3>The agent understands &amp; searches</h3>
+            <p>It reads intent, asks the right follow-ups, and queries your live inventory and rates in real time.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step-num">3</span>
+            <div class="step-icon" aria-hidden="true">✅</div>
+            <h3>It books the whole trip</h3>
+            <p>Confirms availability, takes payment, sends confirmation, and handles changes and upsells after.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOR OPERATORS ===== -->
+    <section class="section section-dark" id="operators">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker kicker-light">For hotels &amp; operators</span>
+          <h2 class="section-title">Your inventory. Your brand. An agent that never sleeps.</h2>
+          <p class="section-sub light">
+            powderday is the AI booking infrastructure for independent and branded hotels —
+            so you can sell direct, in your own voice, on every channel your guests use.
+          </p>
+        </div>
+        <div class="feature-grid">
+          <div class="feature reveal">
+            <h3>Sell direct, keep the margin</h3>
+            <p>Own the guest relationship and skip 15–25% OTA commissions on every direct booking the agent closes.</p>
+          </div>
+          <div class="feature reveal">
+            <h3>Brand-native, not generic</h3>
+            <p>The agent speaks in your voice, on your channels, with your policies — an extension of your front desk.</p>
+          </div>
+          <div class="feature reveal">
+            <h3>Live availability &amp; rates</h3>
+            <p>Two-way sync with your PMS and channel manager. No overbookings, no stale pricing.</p>
+          </div>
+          <div class="feature reveal">
+            <h3>Upsell &amp; concierge built in</h3>
+            <p>Room upgrades, late checkout, F&amp;B, spa, local recommendations — revenue the OTAs never let you capture.</p>
+          </div>
+          <div class="feature reveal">
+            <h3>24/7 and multilingual</h3>
+            <p>Answer and book in 30+ languages, instantly, at every hour — without adding headcount.</p>
+          </div>
+          <div class="feature reveal">
+            <h3>One API, every channel</h3>
+            <p>Drop powderday into WhatsApp, iMessage, SMS, and web with a single integration.</p>
+          </div>
+        </div>
+        <div class="cta-inline reveal">
+          <a href="#waitlist" class="btn btn-primary">Book a demo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOR TRAVELERS ===== -->
+    <section class="section" id="travelers">
+      <div class="container split">
+        <div class="split-copy reveal">
+          <span class="kicker">For travelers</span>
+          <h2 class="section-title">A travel agent in your pocket — who actually texts back.</h2>
+          <ul class="check-list">
+            <li>Discover by conversation, not forty filters.</li>
+            <li>No new app — use the chat you already use every day.</li>
+            <li>It remembers your preferences from trip to trip.</li>
+            <li>Real options, real prices, booked in seconds.</li>
+          </ul>
+          <a href="#waitlist" class="btn btn-ghost dark">Be first to try it →</a>
+        </div>
+        <div class="split-visual reveal" aria-hidden="true">
+          <div class="bubble-stack">
+            <div class="mini-bubble out">Weekend in Lisbon under €600?</div>
+            <div class="mini-bubble in">Found 3 — booking the one in Alfama now ☀️</div>
+            <div class="mini-bubble out">Quiet, with a pool, near Kyoto station</div>
+            <div class="mini-bubble in">Say less. Ryokan locked for the 18th 🏯</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== POSITIONING ===== -->
+    <section class="section band">
+      <div class="container narrow reveal">
+        <h2 class="band-quote">
+          The booking belongs to whoever owns the <span class="grad-text">conversation.</span>
+        </h2>
+        <p class="band-sub">
+          Expedia and Airbnb own the search box. powderday is betting the next era of travel
+          is agentic — booked in chat, owned by the operator, personal again.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== WAITLIST / CTA ===== -->
+    <section class="section waitlist" id="waitlist">
+      <div class="container narrow reveal">
+        <h2 class="section-title">Be first to book by text.</h2>
+        <p class="section-sub">Join the early access list. Operators — tell us about your property and we'll set up a demo.</p>
+
+        <!--
+          This static form just shows a confirmation in-browser.
+          To capture real emails on GitHub Pages, point `action` at a Formspree
+          endpoint (https://formspree.io) and set method="POST":
+            <form action="https://formspree.io/f/yourID" method="POST">
+        -->
+        <form class="signup" id="signup" novalidate>
+          <input type="email" name="email" id="email" placeholder="you@email.com" autocomplete="email" required aria-label="Email address" />
+          <button type="submit" class="btn btn-primary">Request access</button>
+        </form>
+        <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+        <p class="hero-note">Or email us directly: <a href="mailto:hello@powderday.ai">hello@powderday.ai</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
+              <rect width="32" height="32" rx="9" fill="url(#gf)"/>
+              <path d="M7 22.5 13 12l3.2 5.4L19 13l6 9.5H7Z" fill="#fff"/>
+              <circle cx="22.5" cy="9.5" r="2.2" fill="#fff" opacity=".9"/>
+              <defs><linearGradient id="gf" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FF9F45"/><stop offset=".55" stop-color="#FF5C39"/><stop offset="1" stop-color="#FF3D6E"/>
+              </linearGradient></defs>
+            </svg>
+          </span>
+          <span class="brand-name">powderday</span>
+        </span>
+        <p>The AI booking agent for hospitality.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#how">How it works</a>
+        <a href="#operators">For hotels</a>
+        <a href="#travelers">For travelers</a>
+        <a href="mailto:hello@powderday.ai">Contact</a>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year">2026</span> powderday</span>
+      <span>Booked in a text.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
