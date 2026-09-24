@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>powderday — Book your next stay by text</title>
-  <meta name="description" content="powderday is the conversational booking layer for hospitality. Your guests discover and book your properties by chat — on WhatsApp, iMessage, or your site — and you own the guest relationship, not the OTA." />
+  <title>powderday — Your photos, on trend</title>
+  <meta name="description" content="Grew up with a camera in your pocket but missed the TikTok era? powderday turns the photos in your Apple or Google Photos into the dances, challenges and beat-synced edits trending on TikTok and Reels. No editing, no rehearsing, no filming yourself." />
+  <meta name="theme-color" content="#0c0a10" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="powderday — Book your next stay by text" />
-  <meta property="og:description" content="The AI booking agent for hospitality. Discover and book hotels in a single text message." />
-  <meta property="og:url" content="https://powderday.ai" />
+  <meta property="og:title" content="powderday — Your photos, on trend" />
+  <meta property="og:description" content="Turn your camera roll into today's TikTok and Reels trends. No editing, no dancing, no filming." />
+  <meta property="og:url" content="https://www.powderday.ai" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
@@ -18,38 +19,43 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
+  <!-- Shared gradients (referenced by the logo and the animated figures) -->
+  <svg class="svg-defs" width="0" height="0" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="brandG" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#FF9F45"/><stop offset=".45" stop-color="#FF3D6E"/><stop offset="1" stop-color="#A66BFF"/>
+      </linearGradient>
+      <linearGradient id="figGrad" x1="0" y1="10" x2="0" y2="160" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#FFE3C7"/><stop offset="1" stop-color="#FF8FA3"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
   <!-- ===== NAV ===== -->
   <header class="nav" id="nav">
     <div class="container nav-inner">
       <a href="#top" class="brand" aria-label="powderday home">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
-            <rect width="32" height="32" rx="9" fill="url(#g)"/>
-            <path d="M7 22.5 13 12l3.2 5.4L19 13l6 9.5H7Z" fill="#fff"/>
-            <circle cx="22.5" cy="9.5" r="2.2" fill="#fff" opacity=".9"/>
-            <defs>
-              <linearGradient id="g" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#FF9F45"/><stop offset=".55" stop-color="#FF5C39"/><stop offset="1" stop-color="#FF3D6E"/>
-              </linearGradient>
-            </defs>
-          </svg>
-        </span>
+        <svg class="brand-mark" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
+          <rect width="32" height="32" rx="9" fill="url(#brandG)"/>
+          <path d="M12.5 10.2v11.6a.8.8 0 0 0 1.2.7l9.3-5.8a.8.8 0 0 0 0-1.4l-9.3-5.8a.8.8 0 0 0-1.2.7Z" fill="#fff"/>
+          <path d="M24.6 4.6l.7 1.9 1.9.7-1.9.7-.7 1.9-.7-1.9-1.9-.7 1.9-.7z" fill="#fff"/>
+        </svg>
         <span class="brand-name">powderday</span>
       </a>
 
       <nav class="nav-links" aria-label="Primary">
         <a href="#how">How it works</a>
-        <a href="#operators">For hotels</a>
-        <a href="#travelers">For travelers</a>
+        <a href="#trends">Trends</a>
+        <a href="#privacy">Privacy</a>
       </nav>
 
-      <a href="#waitlist" class="btn btn-primary btn-sm nav-cta">Get early access</a>
+      <a href="#waitlist" class="btn btn-primary btn-sm">Join the waitlist</a>
     </div>
   </header>
 
@@ -57,85 +63,176 @@
 
     <!-- ===== HERO ===== -->
     <section class="hero">
+      <div class="hero-glow glow-1" aria-hidden="true"></div>
+      <div class="hero-glow glow-2" aria-hidden="true"></div>
+
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <span class="eyebrow">AI booking infrastructure for hospitality</span>
-          <h1>Book your next stay <span class="grad-text">by text.</span></h1>
+          <span class="eyebrow">✦ For everyone who grew up with a camera in their pocket</span>
+          <h1>Your photos, <span class="grad-text">on&nbsp;trend.</span></h1>
           <p class="lede">
-            powderday is the conversational booking layer for hotels. Guests discover and
-            book your properties in a single chat — on WhatsApp, iMessage, or your own site —
-            and you keep the guest relationship, not the OTA.
+            You've got years of photos in Apple or Google Photos, and not one video of you
+            doing the trend. powderday turns the shots you already have into the dances,
+            challenges and beat-synced edits taking over TikTok and Reels.
+            No editing. No rehearsing. No filming yourself.
           </p>
-          <div class="hero-cta">
-            <a href="#waitlist" class="btn btn-primary">Get early access</a>
-            <a href="#operators" class="btn btn-ghost">For hotel operators →</a>
-          </div>
-          <p class="hero-note">No app to download. Just a message.</p>
+
+          <form class="signup" novalidate>
+            <input type="email" name="email" placeholder="you@email.com" autocomplete="email" required aria-label="Email address" />
+            <button type="submit" class="btn btn-primary">Join the waitlist</button>
+          </form>
+          <p class="form-msg" role="status" aria-live="polite"></p>
+
+          <p class="hero-note">Works with Apple Photos and Google Photos</p>
         </div>
 
-        <!-- Phone / chat mockup -->
-        <div class="hero-phone reveal" aria-label="Example booking conversation">
-          <div class="phone">
-            <div class="phone-notch" aria-hidden="true"></div>
-            <div class="chat-header">
-              <span class="chat-avatar" aria-hidden="true">p</span>
-              <div class="chat-id">
-                <strong>powderday</strong>
-                <span class="chat-status"><i></i> online</span>
-              </div>
-            </div>
-            <div class="chat-body" id="chat">
-              <div class="msg out" data-step="1"><p>I'd like to book a hotel in Milan, Italy in September 🇮🇹</p></div>
-              <div class="msg in" data-step="2"><p>Love it — Milan in September is gorgeous. Quick one: exact dates, and what's the vibe? Design-forward, central, budget-friendly?</p></div>
-              <div class="msg out" data-step="3"><p>Sep 12–15. Design-forward, walkable to the Duomo.</p></div>
-              <div class="msg in" data-step="4"><p>Perfect. Here's the one I'd book myself:</p></div>
-              <div class="msg in card" data-step="5">
-                <div class="prop">
-                  <div class="prop-img" aria-hidden="true"></div>
-                  <div class="prop-info">
-                    <strong>Senato Milano</strong>
-                    <span>★ 4.8 · 4 min walk to the Duomo</span>
-                    <span class="prop-price">€240 / night · €720 total</span>
-                  </div>
+        <!-- Animated product demo -->
+        <div class="demo reveal" id="demo">
+          <div class="phone" role="img" aria-label="App demo: powderday picks your best photos, you choose a trending template, and it renders a beat-synced video ready to post">
+            <div class="phone-notch"></div>
+            <div class="screen" aria-hidden="true">
+              <div class="status"><span>9:41</span><span class="battery"></span></div>
+
+              <!-- 1. Camera roll: auto-picks the best shots -->
+              <div class="state state-roll active">
+                <div class="s-head"><strong>Recents</strong><span class="pill">✦ Best shots</span></div>
+                <div class="roll">
+                  <div class="tile person" style="--g:linear-gradient(160deg,#ff9a7a,#b8467a);--i:0"><svg viewBox="0 0 40 50"><circle cx="20" cy="17" r="8"/><path d="M4 50c0-11 7-18 16-18s16 7 16 18z"/></svg><span class="check">✓</span></div>
+                  <div class="tile scene" style="--g:linear-gradient(160deg,#6fb1ff,#2b3f8f)"><svg viewBox="0 0 40 50"><circle cx="29" cy="14" r="5"/><path d="M0 50 13 26l9 12 6-7 12 19z"/></svg></div>
+                  <div class="tile person" style="--g:linear-gradient(160deg,#ffd36b,#e0643c);--i:1"><svg viewBox="0 0 40 50"><circle cx="20" cy="17" r="8"/><path d="M4 50c0-11 7-18 16-18s16 7 16 18z"/></svg><span class="check">✓</span></div>
+                  <div class="tile scene" style="--g:linear-gradient(160deg,#7de0b0,#1f6b5a)"><svg viewBox="0 0 40 50"><circle cx="29" cy="14" r="5"/><path d="M0 50 13 26l9 12 6-7 12 19z"/></svg></div>
+                  <div class="tile scene" style="--g:linear-gradient(160deg,#ffb38a,#8a4a6b)"><svg viewBox="0 0 40 50"><circle cx="29" cy="14" r="5"/><path d="M0 50 13 26l9 12 6-7 12 19z"/></svg></div>
+                  <div class="tile person" style="--g:linear-gradient(160deg,#c79bff,#5b3aa6);--i:2"><svg viewBox="0 0 40 50"><circle cx="20" cy="17" r="8"/><path d="M4 50c0-11 7-18 16-18s16 7 16 18z"/></svg><span class="check">✓</span></div>
+                  <div class="tile scene" style="--g:linear-gradient(160deg,#9fd7ff,#3b6d9c)"><svg viewBox="0 0 40 50"><circle cx="29" cy="14" r="5"/><path d="M0 50 13 26l9 12 6-7 12 19z"/></svg></div>
+                  <div class="tile person" style="--g:linear-gradient(160deg,#ff7eb3,#7a2d6b);--i:3"><svg viewBox="0 0 40 50"><circle cx="20" cy="17" r="8"/><path d="M4 50c0-11 7-18 16-18s16 7 16 18z"/></svg><span class="check">✓</span></div>
+                  <div class="tile scene" style="--g:linear-gradient(160deg,#b5e36b,#4a7a2c)"><svg viewBox="0 0 40 50"><circle cx="29" cy="14" r="5"/><path d="M0 50 13 26l9 12 6-7 12 19z"/></svg></div>
+                  <div class="tile scene" style="--g:linear-gradient(160deg,#5c5470,#2b2638)"><svg viewBox="0 0 40 50"><circle cx="29" cy="14" r="5"/><path d="M0 50 13 26l9 12 6-7 12 19z"/></svg></div>
+                  <div class="tile person" style="--g:linear-gradient(160deg,#ffc0a0,#c0506a);--i:4"><svg viewBox="0 0 40 50"><circle cx="20" cy="17" r="8"/><path d="M4 50c0-11 7-18 16-18s16 7 16 18z"/></svg><span class="check">✓</span></div>
+                  <div class="tile scene" style="--g:linear-gradient(160deg,#8fb7c9,#34506b)"><svg viewBox="0 0 40 50"><circle cx="29" cy="14" r="5"/><path d="M0 50 13 26l9 12 6-7 12 19z"/></svg></div>
                 </div>
+                <p class="s-cap"><b>5 great shots</b> found · scenery skipped</p>
               </div>
-              <div class="msg in" data-step="6"><p>Want me to lock in Sep 12–15?</p></div>
-              <div class="msg out" data-step="7"><p>Yes, book it 🙌</p></div>
-              <div class="msg in" data-step="8"><p>Done ✅ Confirmation <b>#PWD-8842</b> is in your inbox. Have an amazing trip!</p></div>
+
+              <!-- 2. Pick a trending template -->
+              <div class="state state-trend">
+                <div class="s-head"><strong>Trending today</strong><span class="pill hot">● Live</span></div>
+                <ul class="trend-list">
+                  <li class="row pick">
+                    <span class="thumb" style="--g:linear-gradient(160deg,#ff7eb3,#7a2d6b)"><svg viewBox="0 0 40 50"><circle cx="20" cy="17" r="8"/><path d="M4 50c0-11 7-18 16-18s16 7 16 18z"/></svg></span>
+                    <span class="row-txt"><b>Beat Drop</b><small>Beat sync · 12s</small></span><span class="new">NEW</span>
+                  </li>
+                  <li class="row">
+                    <span class="thumb" style="--g:linear-gradient(160deg,#c79bff,#5b3aa6)"><svg viewBox="0 0 40 50"><circle cx="20" cy="17" r="8"/><path d="M4 50c0-11 7-18 16-18s16 7 16 18z"/></svg></span>
+                    <span class="row-txt"><b>Mirror Step</b><small>Dance · 15s</small></span><span class="new">NEW</span>
+                  </li>
+                  <li class="row">
+                    <span class="thumb" style="--g:linear-gradient(160deg,#ffd36b,#e0643c)"><svg viewBox="0 0 40 50"><circle cx="20" cy="17" r="8"/><path d="M4 50c0-11 7-18 16-18s16 7 16 18z"/></svg></span>
+                    <span class="row-txt"><b>Slow-Mo Spin</b><small>Transition · 9s</small></span>
+                  </li>
+                  <li class="row">
+                    <span class="thumb" style="--g:linear-gradient(160deg,#6fb1ff,#2b3f8f)"><svg viewBox="0 0 40 50"><circle cx="20" cy="17" r="8"/><path d="M4 50c0-11 7-18 16-18s16 7 16 18z"/></svg></span>
+                    <span class="row-txt"><b>Duo Switch</b><small>Challenge · 14s</small></span>
+                  </li>
+                </ul>
+                <div class="s-cta">Use this trend</div>
+              </div>
+
+              <!-- 3. Render: motion transfer + face lock + beat sync -->
+              <div class="state state-render">
+                <div class="frame">
+                  <svg class="fig dancing fade" viewBox="0 0 100 160">
+                    <g class="body">
+                      <g class="leg-l"><line x1="45" y1="92" x2="40" y2="122"/><g class="shin-l"><line x1="40" y1="122" x2="38" y2="152"/><circle class="j" cx="38" cy="152" r="2.6"/></g><circle class="j" cx="40" cy="122" r="2.6"/></g>
+                      <g class="leg-r"><line x1="55" y1="92" x2="60" y2="122"/><g class="shin-r"><line x1="60" y1="122" x2="62" y2="152"/><circle class="j" cx="62" cy="152" r="2.6"/></g><circle class="j" cx="60" cy="122" r="2.6"/></g>
+                      <line class="torso" x1="50" y1="46" x2="50" y2="88"/>
+                      <g class="arm-l"><line x1="44" y1="50" x2="30" y2="72"/><g class="fore-l"><line x1="30" y1="72" x2="26" y2="96"/><circle class="j" cx="26" cy="96" r="2.6"/></g><circle class="j" cx="30" cy="72" r="2.6"/></g>
+                      <g class="arm-r"><line x1="56" y1="50" x2="70" y2="72"/><g class="fore-r"><line x1="70" y1="72" x2="74" y2="96"/><circle class="j" cx="74" cy="96" r="2.6"/></g><circle class="j" cx="70" cy="72" r="2.6"/></g>
+                      <circle class="head" cx="50" cy="28" r="12"/>
+                    </g>
+                  </svg>
+                  <svg class="fig fig--skel dancing" viewBox="0 0 100 160">
+                    <g class="body">
+                      <g class="leg-l"><line x1="45" y1="92" x2="40" y2="122"/><g class="shin-l"><line x1="40" y1="122" x2="38" y2="152"/><circle class="j" cx="38" cy="152" r="2.6"/></g><circle class="j" cx="40" cy="122" r="2.6"/></g>
+                      <g class="leg-r"><line x1="55" y1="92" x2="60" y2="122"/><g class="shin-r"><line x1="60" y1="122" x2="62" y2="152"/><circle class="j" cx="62" cy="152" r="2.6"/></g><circle class="j" cx="60" cy="122" r="2.6"/></g>
+                      <line class="torso" x1="50" y1="46" x2="50" y2="88"/>
+                      <g class="arm-l"><line x1="44" y1="50" x2="30" y2="72"/><g class="fore-l"><line x1="30" y1="72" x2="26" y2="96"/><circle class="j" cx="26" cy="96" r="2.6"/></g><circle class="j" cx="30" cy="72" r="2.6"/></g>
+                      <g class="arm-r"><line x1="56" y1="50" x2="70" y2="72"/><g class="fore-r"><line x1="70" y1="72" x2="74" y2="96"/><circle class="j" cx="74" cy="96" r="2.6"/></g><circle class="j" cx="70" cy="72" r="2.6"/></g>
+                      <circle class="head" cx="50" cy="28" r="12"/>
+                      <circle class="j" cx="44" cy="50" r="2.6"/><circle class="j" cx="56" cy="50" r="2.6"/><circle class="j" cx="45" cy="92" r="2.6"/><circle class="j" cx="55" cy="92" r="2.6"/>
+                    </g>
+                  </svg>
+                  <span class="scan"></span>
+                </div>
+                <ul class="tasks">
+                  <li style="--s:.2s;--t:1s"><i class="tick"></i>Matching the moves</li>
+                  <li style="--s:1s;--t:1.9s"><i class="tick"></i>Locking your face</li>
+                  <li style="--s:1.9s;--t:2.9s"><i class="tick"></i>Syncing to the beat
+                    <span class="wave"><i style="--k:1"></i><i style="--k:4"></i><i style="--k:2"></i><i style="--k:6"></i><i style="--k:3"></i><i style="--k:7"></i><i style="--k:5"></i><i style="--k:2"></i><i style="--k:8"></i><i style="--k:4"></i></span>
+                  </li>
+                </ul>
+                <div class="bar"><i></i></div>
+              </div>
+
+              <!-- 4. Ready to post -->
+              <div class="state state-ready">
+                <div class="frame">
+                  <span class="ready">✓ Ready</span>
+                  <svg class="fig dancing" viewBox="0 0 100 160">
+                    <g class="body">
+                      <g class="leg-l"><line x1="45" y1="92" x2="40" y2="122"/><g class="shin-l"><line x1="40" y1="122" x2="38" y2="152"/></g></g>
+                      <g class="leg-r"><line x1="55" y1="92" x2="60" y2="122"/><g class="shin-r"><line x1="60" y1="122" x2="62" y2="152"/></g></g>
+                      <line class="torso" x1="50" y1="46" x2="50" y2="88"/>
+                      <g class="arm-l"><line x1="44" y1="50" x2="30" y2="72"/><g class="fore-l"><line x1="30" y1="72" x2="26" y2="96"/></g></g>
+                      <g class="arm-r"><line x1="56" y1="50" x2="70" y2="72"/><g class="fore-r"><line x1="70" y1="72" x2="74" y2="96"/></g></g>
+                      <circle class="head" cx="50" cy="28" r="12"/>
+                    </g>
+                  </svg>
+                  <span class="sound">♪ Beat Drop</span>
+                  <span class="mark">made with powderday</span>
+                </div>
+                <div class="share-row"><span class="s-btn primary">Post to TikTok</span><span class="s-btn">Share to Reels</span></div>
+              </div>
             </div>
           </div>
-          <div class="phone-glow" aria-hidden="true"></div>
-        </div>
-      </div>
 
-      <!-- integration strip -->
-      <div class="container">
-        <div class="logo-strip reveal">
-          <span class="logo-strip-label">Plugs into your stack</span>
-          <ul>
-            <li>Mews</li><li>Cloudbeds</li><li>Opera PMS</li><li>SiteMinder</li><li>Stripe</li><li>WhatsApp Business</li>
-          </ul>
+          <ol class="demo-steps" aria-label="Demo steps">
+            <li><button type="button" class="on">1 · Your photos</button></li>
+            <li><button type="button">2 · Pick a trend</button></li>
+            <li><button type="button">3 · Render</button></li>
+            <li><button type="button">4 · Post</button></li>
+          </ol>
         </div>
       </div>
     </section>
 
+    <!-- ===== TREND TICKER ===== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>#BeatDrop</span><span>#MirrorStep</span><span>#SlowMoSpin</span><span>#DuoSwitch</span><span>#FreezeFrame</span><span>#OutfitFlip</span><span>#HandJive</span><span>#ShoulderPop</span>
+        <span>#BeatDrop</span><span>#MirrorStep</span><span>#SlowMoSpin</span><span>#DuoSwitch</span><span>#FreezeFrame</span><span>#OutfitFlip</span><span>#HandJive</span><span>#ShoulderPop</span>
+      </div>
+    </div>
+
     <!-- ===== PROBLEM ===== -->
-    <section class="section problem">
+    <section class="section">
       <div class="container narrow reveal">
-        <h2 class="section-title">Travel booking is stuck in 2008.</h2>
-        <p class="section-sub">
-          Forty open tabs. A dozen filters. Endless scrolling, then a checkout flow designed
-          to confuse you. Meanwhile the way we actually talk to each other became a text box.
-        </p>
-        <div class="before-after">
+        <div class="section-head">
+          <h2 class="section-title">You grew up with a camera in your pocket. Not with TikTok.</h2>
+          <p class="section-sub">
+            If you were taking phone photos before short video existed, you have years of great
+            shots and no plans to learn a dance, film thirty takes and edit to the beat.
+            powderday gives those photos a second life on today's trends.
+          </p>
+        </div>
+        <div class="ba">
           <div class="ba-card before">
-            <span class="ba-tag">Today</span>
-            <p>Search → filter → compare → second-guess → repeat. 47 tabs, 3 hours, still not sure.</p>
+            <span class="ba-tag">The old way</span>
+            <p>Learn the dance. Film it 30 times. Edit. Sync the audio. Hate it. Delete it.</p>
           </div>
           <div class="ba-arrow" aria-hidden="true">→</div>
           <div class="ba-card after">
             <span class="ba-tag">With powderday</span>
-            <p>“Book me a design hotel near the Duomo, Sep 12–15.” Done in one message.</p>
+            <p>Pick that photo from 2016. Pick today's trend. Post. Zero rehearsal.</p>
           </div>
         </div>
       </div>
@@ -146,130 +243,156 @@
       <div class="container">
         <div class="section-head reveal">
           <span class="kicker">How it works</span>
-          <h2 class="section-title">Three steps. One conversation.</h2>
+          <h2 class="section-title">Connect once. Then it's two&nbsp;taps.</h2>
         </div>
         <div class="steps">
           <div class="step reveal">
-            <span class="step-num">1</span>
-            <div class="step-icon" aria-hidden="true">💬</div>
-            <h3>The guest sends a message</h3>
-            <p>On WhatsApp, iMessage, SMS, or a chat widget on your own site — wherever they already are.</p>
+            <span class="step-tag">Once</span>
+            <span class="step-num">01</span>
+            <h3>Connect your photos</h3>
+            <p>Link Apple Photos or Google Photos. powderday finds your best shots, where you're clear, well-lit and in frame, and skips the sunsets and screenshots.</p>
           </div>
           <div class="step reveal">
-            <span class="step-num">2</span>
-            <div class="step-icon" aria-hidden="true">🧠</div>
-            <h3>The agent understands &amp; searches</h3>
-            <p>It reads intent, asks the right follow-ups, and queries your live inventory and rates in real time.</p>
+            <span class="step-tag">Tap 1</span>
+            <span class="step-num">02</span>
+            <h3>Pick today's trend</h3>
+            <p>Browse the dances, challenges and edits climbing right now, and tap the one you want to be in.</p>
           </div>
           <div class="step reveal">
-            <span class="step-num">3</span>
-            <div class="step-icon" aria-hidden="true">✅</div>
-            <h3>It books the whole trip</h3>
-            <p>Confirms availability, takes payment, sends confirmation, and handles changes and upsells after.</p>
+            <span class="step-tag">Tap 2</span>
+            <span class="step-num">03</span>
+            <h3>Post it</h3>
+            <p>Your video comes back with the moves, your face and the beat all locked in. Share it straight to TikTok or Reels.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== FOR OPERATORS ===== -->
-    <section class="section section-dark" id="operators">
+    <!-- ===== WHY IT LOOKS REAL ===== -->
+    <section class="section real">
       <div class="container">
         <div class="section-head reveal">
-          <span class="kicker kicker-light">For hotels &amp; operators</span>
-          <h2 class="section-title">Your inventory. Your brand. An agent that never sleeps.</h2>
-          <p class="section-sub light">
-            powderday is the AI booking infrastructure for independent and branded hotels —
-            so you can sell direct, in your own voice, on every channel your guests use.
-          </p>
+          <span class="kicker">Why it looks real</span>
+          <h2 class="section-title">It moves like the trend. It still looks like you.</h2>
         </div>
         <div class="feature-grid">
           <div class="feature reveal">
-            <h3>Sell direct, keep the margin</h3>
-            <p>Own the guest relationship and skip 15–25% OTA commissions on every direct booking the agent closes.</p>
+            <div class="f-icon" aria-hidden="true">📸</div>
+            <h3>Finds the gems in your library</h3>
+            <p>Digs through years of photos for the ones where you look great: clear, well-lit and in frame. That shot from a trip in 2018 can be in this week's trend.</p>
           </div>
           <div class="feature reveal">
-            <h3>Brand-native, not generic</h3>
-            <p>The agent speaks in your voice, on your channels, with your policies — an extension of your front desk.</p>
+            <div class="f-icon" aria-hidden="true">🕺</div>
+            <h3>Moves that match</h3>
+            <p>The choreography is mapped from the original trending clip onto your photo, step for step.</p>
           </div>
           <div class="feature reveal">
-            <h3>Live availability &amp; rates</h3>
-            <p>Two-way sync with your PMS and channel manager. No overbookings, no stale pricing.</p>
+            <div class="f-icon" aria-hidden="true">🙂</div>
+            <h3>Your face, locked</h3>
+            <p>Face lock keeps your features sharp and true to you, even through fast spins and big moves.</p>
           </div>
           <div class="feature reveal">
-            <h3>Upsell &amp; concierge built in</h3>
-            <p>Room upgrades, late checkout, F&amp;B, spa, local recommendations — revenue the OTAs never let you capture.</p>
+            <div class="f-icon" aria-hidden="true">🎵</div>
+            <h3>Right on the beat</h3>
+            <p>The trending sound is synced to every move, so the drop lands when you do.</p>
           </div>
           <div class="feature reveal">
-            <h3>24/7 and multilingual</h3>
-            <p>Answer and book in 30+ languages, instantly, at every hour — without adding headcount.</p>
+            <div class="f-icon" aria-hidden="true">⚡</div>
+            <h3>Today's trends, today</h3>
+            <p>New templates land while a trend is still climbing, not after it's peaked.</p>
           </div>
           <div class="feature reveal">
-            <h3>One API, every channel</h3>
-            <p>Drop powderday into WhatsApp, iMessage, SMS, and web with a single integration.</p>
-          </div>
-        </div>
-        <div class="cta-inline reveal">
-          <a href="#waitlist" class="btn btn-primary">Book a demo</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== FOR TRAVELERS ===== -->
-    <section class="section" id="travelers">
-      <div class="container split">
-        <div class="split-copy reveal">
-          <span class="kicker">For travelers</span>
-          <h2 class="section-title">A travel agent in your pocket — who actually texts back.</h2>
-          <ul class="check-list">
-            <li>Discover by conversation, not forty filters.</li>
-            <li>No new app — use the chat you already use every day.</li>
-            <li>It remembers your preferences from trip to trip.</li>
-            <li>Real options, real prices, booked in seconds.</li>
-          </ul>
-          <a href="#waitlist" class="btn btn-ghost dark">Be first to try it →</a>
-        </div>
-        <div class="split-visual reveal" aria-hidden="true">
-          <div class="bubble-stack">
-            <div class="mini-bubble out">Weekend in Lisbon under €600?</div>
-            <div class="mini-bubble in">Found 3 — booking the one in Alfama now ☀️</div>
-            <div class="mini-bubble out">Quiet, with a pool, near Kyoto station</div>
-            <div class="mini-bubble in">Say less. Ryokan locked for the 18th 🏯</div>
+            <div class="f-icon" aria-hidden="true">📲</div>
+            <h3>One tap to share</h3>
+            <p>Vertical, sized for TikTok and Reels, with a small made-with-powderday tag friends can tap to make their own.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== POSITIONING ===== -->
-    <section class="section band">
-      <div class="container narrow reveal">
-        <h2 class="band-quote">
-          The booking belongs to whoever owns the <span class="grad-text">conversation.</span>
-        </h2>
-        <p class="band-sub">
-          Expedia and Airbnb own the search box. powderday is betting the next era of travel
-          is agentic — booked in chat, owned by the operator, personal again.
-        </p>
+    <!-- ===== TRENDS ===== -->
+    <section class="section" id="trends">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Trend drop</span>
+          <h2 class="section-title">Fresh templates, while they're still climbing.</h2>
+          <p class="section-sub">We turn the moves blowing up on TikTok and Reels into one-tap templates. Hover a card to see it move.</p>
+        </div>
+        <div class="trend-row reveal">
+          <div class="trend-card" style="--g:linear-gradient(165deg,#ff7eb3,#6b2160)">
+            <span class="tc-badge">NEW TODAY</span>
+            <svg class="fig dancing" viewBox="0 0 100 160" style="--d:-0.4s" aria-hidden="true"><g class="body"><g class="leg-l"><line x1="45" y1="92" x2="40" y2="122"/><g class="shin-l"><line x1="40" y1="122" x2="38" y2="152"/></g></g><g class="leg-r"><line x1="55" y1="92" x2="60" y2="122"/><g class="shin-r"><line x1="60" y1="122" x2="62" y2="152"/></g></g><line class="torso" x1="50" y1="46" x2="50" y2="88"/><g class="arm-l"><line x1="44" y1="50" x2="30" y2="72"/><g class="fore-l"><line x1="30" y1="72" x2="26" y2="96"/></g></g><g class="arm-r"><line x1="56" y1="50" x2="70" y2="72"/><g class="fore-r"><line x1="70" y1="72" x2="74" y2="96"/></g></g><circle class="head" cx="50" cy="28" r="12"/></g></svg>
+            <div class="tc-label"><b>Beat Drop</b><small>Beat sync · 12s</small></div>
+          </div>
+          <div class="trend-card" style="--g:linear-gradient(165deg,#b18cff,#3f2787)">
+            <span class="tc-badge">NEW TODAY</span>
+            <svg class="fig dancing" viewBox="0 0 100 160" style="--d:-0.8s" aria-hidden="true"><g class="body"><g class="leg-l"><line x1="45" y1="92" x2="40" y2="122"/><g class="shin-l"><line x1="40" y1="122" x2="38" y2="152"/></g></g><g class="leg-r"><line x1="55" y1="92" x2="60" y2="122"/><g class="shin-r"><line x1="60" y1="122" x2="62" y2="152"/></g></g><line class="torso" x1="50" y1="46" x2="50" y2="88"/><g class="arm-l"><line x1="44" y1="50" x2="30" y2="72"/><g class="fore-l"><line x1="30" y1="72" x2="26" y2="96"/></g></g><g class="arm-r"><line x1="56" y1="50" x2="70" y2="72"/><g class="fore-r"><line x1="70" y1="72" x2="74" y2="96"/></g></g><circle class="head" cx="50" cy="28" r="12"/></g></svg>
+            <div class="tc-label"><b>Mirror Step</b><small>Dance · 15s</small></div>
+          </div>
+          <div class="trend-card" style="--g:linear-gradient(165deg,#ffc56b,#b8432c)">
+            <svg class="fig dancing" viewBox="0 0 100 160" style="--d:-1.2s" aria-hidden="true"><g class="body"><g class="leg-l"><line x1="45" y1="92" x2="40" y2="122"/><g class="shin-l"><line x1="40" y1="122" x2="38" y2="152"/></g></g><g class="leg-r"><line x1="55" y1="92" x2="60" y2="122"/><g class="shin-r"><line x1="60" y1="122" x2="62" y2="152"/></g></g><line class="torso" x1="50" y1="46" x2="50" y2="88"/><g class="arm-l"><line x1="44" y1="50" x2="30" y2="72"/><g class="fore-l"><line x1="30" y1="72" x2="26" y2="96"/></g></g><g class="arm-r"><line x1="56" y1="50" x2="70" y2="72"/><g class="fore-r"><line x1="70" y1="72" x2="74" y2="96"/></g></g><circle class="head" cx="50" cy="28" r="12"/></g></svg>
+            <div class="tc-label"><b>Slow-Mo Spin</b><small>Transition · 9s</small></div>
+          </div>
+          <div class="trend-card" style="--g:linear-gradient(165deg,#7cc4ff,#23407f)">
+            <svg class="fig dancing" viewBox="0 0 100 160" style="--d:-0.2s" aria-hidden="true"><g class="body"><g class="leg-l"><line x1="45" y1="92" x2="40" y2="122"/><g class="shin-l"><line x1="40" y1="122" x2="38" y2="152"/></g></g><g class="leg-r"><line x1="55" y1="92" x2="60" y2="122"/><g class="shin-r"><line x1="60" y1="122" x2="62" y2="152"/></g></g><line class="torso" x1="50" y1="46" x2="50" y2="88"/><g class="arm-l"><line x1="44" y1="50" x2="30" y2="72"/><g class="fore-l"><line x1="30" y1="72" x2="26" y2="96"/></g></g><g class="arm-r"><line x1="56" y1="50" x2="70" y2="72"/><g class="fore-r"><line x1="70" y1="72" x2="74" y2="96"/></g></g><circle class="head" cx="50" cy="28" r="12"/></g></svg>
+            <div class="tc-label"><b>Duo Switch</b><small>Challenge · 14s</small></div>
+          </div>
+          <div class="trend-card" style="--g:linear-gradient(165deg,#7de0b0,#1d5c52)">
+            <svg class="fig dancing" viewBox="0 0 100 160" style="--d:-1s" aria-hidden="true"><g class="body"><g class="leg-l"><line x1="45" y1="92" x2="40" y2="122"/><g class="shin-l"><line x1="40" y1="122" x2="38" y2="152"/></g></g><g class="leg-r"><line x1="55" y1="92" x2="60" y2="122"/><g class="shin-r"><line x1="60" y1="122" x2="62" y2="152"/></g></g><line class="torso" x1="50" y1="46" x2="50" y2="88"/><g class="arm-l"><line x1="44" y1="50" x2="30" y2="72"/><g class="fore-l"><line x1="30" y1="72" x2="26" y2="96"/></g></g><g class="arm-r"><line x1="56" y1="50" x2="70" y2="72"/><g class="fore-r"><line x1="70" y1="72" x2="74" y2="96"/></g></g><circle class="head" cx="50" cy="28" r="12"/></g></svg>
+            <div class="tc-label"><b>Freeze Frame</b><small>Challenge · 10s</small></div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- ===== WAITLIST / CTA ===== -->
+    <!-- ===== PRIVACY ===== -->
+    <section class="section" id="privacy">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Privacy</span>
+          <h2 class="section-title">Your camera roll stays yours.</h2>
+        </div>
+        <div class="privacy-grid">
+          <div class="p-card reveal">
+            <div class="f-icon" aria-hidden="true">🔐</div>
+            <h3>You set the access</h3>
+            <p>Share your whole library or only the photos you pick. You can change it anytime in your phone's settings.</p>
+          </div>
+          <div class="p-card reveal">
+            <div class="f-icon" aria-hidden="true">🖼️</div>
+            <h3>Only what you allow</h3>
+            <p>powderday only works with the photos you give it access to.</p>
+          </div>
+          <div class="p-card reveal">
+            <div class="f-icon" aria-hidden="true">👀</div>
+            <h3>Nothing posts without you</h3>
+            <p>Your videos stay private until you choose to share them.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WAITLIST ===== -->
     <section class="section waitlist" id="waitlist">
-      <div class="container narrow reveal">
-        <h2 class="section-title">Be first to book by text.</h2>
-        <p class="section-sub">Join the early access list. Operators — tell us about your property and we'll set up a demo.</p>
+      <div class="container">
+        <div class="waitlist-card reveal">
+          <h2 class="section-title">Be first on the next&nbsp;trend.</h2>
+          <p class="section-sub">powderday is launching soon. Join the waitlist for early access and launch pricing.</p>
+          <p class="price-note">One simple plan, around <b>$10 a month</b>. Less than a takeout lunch, for as many trends as you want to jump on.</p>
 
-        <!--
-          This static form just shows a confirmation in-browser.
-          To capture real emails on GitHub Pages, point `action` at a Formspree
-          endpoint (https://formspree.io) and set method="POST":
-            <form action="https://formspree.io/f/yourID" method="POST">
-        -->
-        <form class="signup" id="signup" novalidate>
-          <input type="email" name="email" id="email" placeholder="you@email.com" autocomplete="email" required aria-label="Email address" />
-          <button type="submit" class="btn btn-primary">Request access</button>
-        </form>
-        <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
-        <p class="hero-note">Or email us directly: <a href="mailto:hello@powderday.ai">hello@powderday.ai</a></p>
+          <!--
+            These static forms confirm in-browser only. To collect real emails on
+            GitHub Pages, point them at a Formspree endpoint (https://formspree.io):
+              <form class="signup" action="https://formspree.io/f/yourID" method="POST">
+            and remove the preventDefault() in script.js.
+          -->
+          <form class="signup" novalidate>
+            <input type="email" name="email" placeholder="you@email.com" autocomplete="email" required aria-label="Email address" />
+            <button type="submit" class="btn btn-primary">Join the waitlist</button>
+          </form>
+          <p class="form-msg" role="status" aria-live="polite"></p>
+          <p class="fine">Questions? <a href="mailto:hello@powderday.ai">hello@powderday.ai</a></p>
+        </div>
       </div>
     </section>
 
@@ -280,30 +403,25 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <span class="brand">
-          <span class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
-              <rect width="32" height="32" rx="9" fill="url(#gf)"/>
-              <path d="M7 22.5 13 12l3.2 5.4L19 13l6 9.5H7Z" fill="#fff"/>
-              <circle cx="22.5" cy="9.5" r="2.2" fill="#fff" opacity=".9"/>
-              <defs><linearGradient id="gf" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#FF9F45"/><stop offset=".55" stop-color="#FF5C39"/><stop offset="1" stop-color="#FF3D6E"/>
-              </linearGradient></defs>
-            </svg>
-          </span>
+          <svg class="brand-mark" viewBox="0 0 32 32" width="26" height="26" aria-hidden="true">
+            <rect width="32" height="32" rx="9" fill="url(#brandG)"/>
+            <path d="M12.5 10.2v11.6a.8.8 0 0 0 1.2.7l9.3-5.8a.8.8 0 0 0 0-1.4l-9.3-5.8a.8.8 0 0 0-1.2.7Z" fill="#fff"/>
+            <path d="M24.6 4.6l.7 1.9 1.9.7-1.9.7-.7 1.9-.7-1.9-1.9-.7 1.9-.7z" fill="#fff"/>
+          </svg>
           <span class="brand-name">powderday</span>
         </span>
-        <p>The AI booking agent for hospitality.</p>
+        <p>Your photos, on trend.</p>
       </div>
       <nav class="footer-links" aria-label="Footer">
         <a href="#how">How it works</a>
-        <a href="#operators">For hotels</a>
-        <a href="#travelers">For travelers</a>
+        <a href="#trends">Trends</a>
+        <a href="#privacy">Privacy</a>
         <a href="mailto:hello@powderday.ai">Contact</a>
       </nav>
     </div>
     <div class="container footer-bottom">
-      <span>© <span id="year">2026</span> powderday</span>
-      <span>Booked in a text.</span>
+      <span>© <span id="year">2026</span> powderday AI</span>
+      <span>Not affiliated with TikTok, Instagram, Apple or Google.</span>
     </div>
   </footer>
 

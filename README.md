@@ -1,9 +1,9 @@
 # powderday
 
-Landing page for **powderday** — the AI booking agent for hospitality. A text-to-book
-agent that lets guests discover and book hotels in a single chat (WhatsApp, iMessage,
-SMS, or web), and the conversational booking infrastructure for independent and branded
-hotel operators.
+Landing page for **powderday** — an AI video app that turns the photos already in your
+Apple or Google Photos into the dances, challenges and beat-synced edits trending on
+TikTok and Instagram Reels. Built for people who grew up with a phone camera (and years
+of photos) but never filmed themselves for short video.
 
 Static site — plain HTML/CSS/JS, no build step, no dependencies.
 

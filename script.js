@@ -6,7 +6,7 @@
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---- Nav shadow on scroll ---- */
+  /* ---- Nav border on scroll ---- */
   var nav = document.getElementById('nav');
   function onScroll() {
     if (window.scrollY > 8) nav.classList.add('scrolled');
@@ -28,87 +28,63 @@
     reveals.forEach(function (el) { el.classList.add('visible'); });
   }
 
-  /* ---- Animated chat ---- */
-  var chat = document.getElementById('chat');
-  if (chat) {
-    var msgs = Array.prototype.slice.call(chat.querySelectorAll('.msg'));
+  /* ---- Phone demo: cycle through the four app states ---- */
+  var demo = document.getElementById('demo');
+  if (demo) {
+    var states = Array.prototype.slice.call(demo.querySelectorAll('.state'));
+    var buttons = Array.prototype.slice.call(demo.querySelectorAll('.demo-steps button'));
+    // how long each state stays on screen (render is longer so its tasks finish)
+    var durations = [3200, 3000, 3600, 3400];
+    var current = 0;
+    var timer = null;
+    var inView = true;
 
-    if (reduceMotion) {
-      msgs.forEach(function (m) { m.classList.add('show'); });
-    } else {
-      // hide all, then play sequentially when the chat scrolls into view
-      msgs.forEach(function (m) { m.style.display = 'none'; });
-      var played = false;
-
-      function playChat() {
-        if (played) return;
-        played = true;
-
-        var i = 0;
-        function next() {
-          if (i >= msgs.length) return;
-          var m = msgs[i];
-          var incoming = m.classList.contains('in');
-          var delay = incoming ? 950 : 600;
-
-          if (incoming) {
-            var typing = document.createElement('div');
-            typing.className = 'typing';
-            typing.innerHTML = '<span></span><span></span><span></span>';
-            chat.appendChild(typing);
-            chat.scrollTop = chat.scrollHeight;
-            setTimeout(function () {
-              chat.removeChild(typing);
-              show(m);
-            }, delay);
-          } else {
-            setTimeout(function () { show(m); }, delay);
-          }
-        }
-        function show(m) {
-          m.style.display = '';
-          // force reflow so the transition fires
-          void m.offsetWidth;
-          m.classList.add('show');
-          chat.scrollTop = chat.scrollHeight;
-          i++;
-          next();
-        }
-        next();
-      }
-
-      if ('IntersectionObserver' in window) {
-        var cio = new IntersectionObserver(function (entries) {
-          entries.forEach(function (e) {
-            if (e.isIntersecting) { playChat(); cio.disconnect(); }
-          });
-        }, { threshold: 0.4 });
-        cio.observe(chat);
-      } else {
-        playChat();
-      }
+    function show(i) {
+      current = i;
+      states.forEach(function (s, k) { s.classList.toggle('active', k === i); });
+      buttons.forEach(function (b, k) { b.classList.toggle('on', k === i); });
     }
+    function schedule() {
+      clearTimeout(timer);
+      if (reduceMotion || !inView) return;
+      timer = setTimeout(function () {
+        show((current + 1) % states.length);
+        schedule();
+      }, durations[current]);
+    }
+
+    buttons.forEach(function (b, k) {
+      b.addEventListener('click', function () { show(k); schedule(); });
+    });
+
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        inView = entries[0].isIntersecting;
+        if (inView) schedule(); else clearTimeout(timer);
+      }, { threshold: 0.3 }).observe(demo);
+    } else {
+      schedule();
+    }
+    show(0);
   }
 
-  /* ---- Signup form (static / no backend) ---- */
-  var form = document.getElementById('signup');
-  if (form) {
+  /* ---- Signup forms (static: confirm in-browser; see index.html for Formspree) ---- */
+  Array.prototype.forEach.call(document.querySelectorAll('.signup'), function (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var input = document.getElementById('email');
-      var msg = document.getElementById('formMsg');
+      var input = form.querySelector('input[type="email"]');
+      var msg = form.nextElementSibling;
       var val = (input.value || '').trim();
       var ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
       if (!ok) {
-        msg.textContent = 'Please enter a valid email.';
+        if (msg) msg.textContent = 'Please enter a valid email.';
         input.focus();
         return;
       }
-      msg.textContent = "You're on the list — we'll be in touch. 🎉";
+      if (msg) msg.textContent = "You're on the list. We'll ping you when it's your turn. ✦";
       form.reset();
-      // To capture for real: swap this for a Formspree POST (see index.html comment).
     });
-  }
+  });
 
   /* ---- Footer year ---- */
   var yr = document.getElementById('year');
